@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: antiquewhite;
+
+
+}
+
+
+.logo img {
+    height: 150px;
+    width: auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+}
+
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+}
+
+.button {
+    width: 125px;
+}
