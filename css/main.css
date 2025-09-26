@@ -1,8 +1,39 @@
+.hero {
+  background: url("/images/bg/hero.svg") no-repeat center center / cover;
+  background-attachment: fixed;   /* делает параллакс */
+  min-height: 60vh;               /* ограничиваем по высоте */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
+
+
 .containerMain {
     background-color: rgb(214, 255, 241);
-    /* border-radius: 5%; */
+    border-radius: 5%;
     height: 500px;
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
 
+
+}
+
+.sidebar {
+    background-color: blanchedalmond;
+    width: 20%;
+}
+
+.catalog {
+    background-color: aliceblue;
+    width: 80%;
 }
