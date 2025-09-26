@@ -1,22 +1,80 @@
 .containerMain {
     background-color: rgb(214, 255, 241);
-    border-radius: 5%;
+    /* border-radius: 5%; */
     height: 500px;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    margin-top: 25px;
+    margin-top: 15px;
 
 
 }
 
 .sidebar {
-    background-color: blanchedalmond;
-    width: 20%;
+    background-color: blanchedalmond;    
+    width: 100px;
 }
+
+
+.search-form {
+  display: flex;
+  /* width: 100px;   */
+  margin-bottom: 15px;
+}
+
+.search-form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 18px;
+}
+
+.search-form button {
+  padding: 8px 12px;
+  border: none;
+  background: #2e7d32;  /* зелёный */
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #256428; /* тёмно-зелёный при наведении */
+}
+
+.sidebar ul {
+    padding: 5px;
+    margin-top: -10px;
+    font-size: 19px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 0px 15px;
+  text-decoration: underline;
+  color: #2e7d32;
+  font-weight: normal;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  text-decoration: none; /* появляется при наведении */
+}
+
+.sidebar li {
+list-style: none;
+/* margin: 10px; */
+padding: 10px;
+
+}
+
+
 
 .catalog {
     background-color: aliceblue;
-    width: 80%;
+    /* outline: 2px dashed blue;  */
+    width: auto;
 }
+
