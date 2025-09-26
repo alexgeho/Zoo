@@ -1,0 +1,75 @@
+.hero {
+  position: relative;
+  background: url("/images/bg/hero.svg") no-repeat center center / cover;
+  background-attachment: fixed;   /* делает параллакс */
+  min-height: 50vh;               /* ограничиваем по высоте */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  
+}
+
+
+.hero-content {
+  background: rgba(0,0,0,0.4);  /* затемнение */
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 2; 
+  /* margin-top: -210px; */
+  /* margin-left: -370px;  */
+}
+
+.hero-content h1{
+
+  font-size: 55px;
+  font-weight: lighter;
+
+}
+
+.hero-content p{
+
+  font-size: 35px;
+  font-weight: lighter;
+
+}
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    rgba(0,0,0,0.6) 0%,    /* тёмнее сверху */
+    rgba(0,0,0,0.3) 50%,   /* мягче по центру */
+    rgba(0,0,0,0.2) 100%   /* ещё мягче снизу */
+  );
+  z-index: 1;
+}
+
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 26px;
+  font-weight: normal;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ff9800; /* оранжевый */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e68900; /* темнее при наведении */
+}
+
+

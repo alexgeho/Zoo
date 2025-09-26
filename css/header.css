@@ -1,9 +1,3 @@
-.background {
-    background-color: antiquewhite;
-
-
-}
-
 .container {
     display: flex;
     flex-direction: row;
@@ -18,28 +12,77 @@
 }
 
 
-.logo img {
+.logo {
     height: 150px;
     width: auto;
-}
-
-.logo {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
+    margin-bottom: -16px;
 }
+
+.descriptor h3 {
+  margin: 0;
+  margin-top: 40px;              
+  font-size: 20px;
+  color: #2e7d32;      
+}
+
+.descriptor p {
+  margin: 2px 0 0 0;     
+  font-size: 17px;
+  color: #555;
+}
+
+
 
 
 .menu ul {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -100px;
 }
 
-.button {
-    width: 125px;
+.menu a {
+    color: #2e7d32;
+    /* зелёный текст */
+    text-decoration: underline;
+    /* всегда подчёркнуты */
+    font-weight: 200;
+    transition: color 0.3s ease;
+    /* плавная смена цвета */
+    font-size: 22px;
+}
+
+.menu a:hover {
+    color: #ff9800;
+    /* при наведении становится оранжевым */
+    text-decoration: underline;
+    /* подчёркивание остаётся */
+}
+
+
+
+.btn-primaryHeader {
+    background-color: #2e7d32;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    /* cursor: pointer; */
+    /* transition: all 0.3s ease; */
+    width: 170px;
+}
+
+.btn-primaryHeader:hover {
+    background-color: #256428;
+}
+
+.number {
+  color: #2e7d32;   
+  font-size: 20px;
+  margin-bottom: -10px;
 }
