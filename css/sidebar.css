@@ -1,25 +1,27 @@
 .containerMain {
-    /* background-color: rgb(214, 255, 241); */
-    /* border-radius: 5%; */
-    height: 500px;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    margin-top: 15px;
+  /* background-color: rgb(214, 255, 241); */
+  /* border-radius: 5%; */
+  height: 500px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+
+  margin-top: 15px;
 
 
 }
 
 .sidebar {
-    background-color: blanchedalmond;    
-    max-width: 195px;
+  background-color: blanchedalmond;
+  max-width: 195px;
 }
 
 
 .search-form {
   display: flex;
-  
+
   margin-bottom: 15px;
 }
 
@@ -31,22 +33,24 @@
 }
 
 .search-form button {
-  padding: 8px 12px;
+  /* padding: 8px 12px; */
   border: none;
-  background: #2e7d32;  /* зелёный */
+  background: #2e7d32;
+  /* зелёный */
   color: white;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
 
 .search-form button:hover {
-  background: #256428; /* тёмно-зелёный при наведении */
+  background: #256428;
+  /* тёмно-зелёный при наведении */
 }
 
 .sidebar ul {
-    padding: 5px;
-    margin-top: -10px;
-    font-size: 19px;
+  padding: 5px;
+  margin-top: -10px;
+  font-size: 19px;
 }
 
 .sidebar a {
@@ -59,15 +63,13 @@
 }
 
 .sidebar a:hover {
-  text-decoration: none; /* появляется при наведении */
+  text-decoration: none;
+  /* появляется при наведении */
 }
 
 .sidebar li {
-list-style: none;
-/* margin: 10px; */
-padding: 10px;
+  list-style: none;
+  /* margin: 10px; */
+  padding: 10px;
 
 }
-
-
-
