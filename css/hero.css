@@ -1,8 +1,8 @@
 .hero {
   position: relative;
   background: url("../images/bg/hero.svg") no-repeat center center / cover;
-  background-attachment: fixed;   /* делает параллакс */
-  min-height: 60vh;               /* ограничиваем по высоте */
+  background-attachment: scroll;   
+  min-height: 60vh;               
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
 
 
 .hero-content {
-  background: rgba(0,0,0,0.4);  /* затемнение */
+  background: rgba(0,0,0,0.5);  
   padding: 20px 40px;
   border-radius: 10px;
   text-align: center;
@@ -43,9 +43,9 @@
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: linear-gradient(
-    rgba(0,0,0,0.6) 0%,    /* тёмнее сверху */
-    rgba(0,0,0,0.3) 50%,   /* мягче по центру */
-    rgba(0,0,0,0.2) 100%   /* ещё мягче снизу */
+    rgba(0,0,0,0.1) 0%,   
+    rgba(0,0,0,0.1) 50%,  
+    rgba(0,0,0,0.2) 100%  
   );
   z-index: 1;
 }

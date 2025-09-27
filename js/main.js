@@ -1,6 +1,4 @@
-// js/main.js
 
-// === ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ ===
 const categoryLinks = document.querySelectorAll('.sidebar a');
 const animals = document.querySelectorAll('.animal');
 
@@ -19,10 +17,20 @@ categoryLinks.forEach(link => {
   });
 });
 
-// === АЛЕРТ ПРИ КЛИКЕ НА ЖИВОТНОЕ ===
+
+
 animals.forEach(animal => {
   animal.addEventListener('click', () => {
     const name = animal.querySelector('h3').innerText;
     alert(`📢 ${name}: detaljerad information kommer snart!`);
   });
 });
+
+
+
+window.addEventListener("scroll", function() {
+  let scrollPos = window.scrollY;
+  let hero = document.querySelector(".hero");
+  hero.style.backgroundPosition = `center ${scrollPos * 0.5}px`;
+});
+
