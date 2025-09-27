@@ -90,18 +90,99 @@
                 </aside>
 
 
-                <section class="catalog">
-                    <div class="animal" data-category="säugetiere">Elefant</div>
-                    <div class="animal" data-category="säugetiere">Lejon</div>
-                    <div class="animal" data-category="fåglar">Örn</div>
-                    <div class="animal" data-category="fåglar">Anka</div>
-                    <div class="animal" data-category="reptiler">Orm</div>
-                    <div class="animal" data-category="reptiler">Ödla</div>
-                    <div class="animal" data-category="fiskar">Fisk</div>
-                    <div class="animal" data-category="fiskar">Haj</div>
-                    <div class="animal" data-category="insekter">Fjäril</div>
-                    <div class="animal" data-category="insekter">Nyckelpiga</div>
-                </section>
+              <section class="catalog">
+ <div class="animal" data-category="säugetiere">
+  <img src="./images/animals/elefant.jpg" alt="Elefant">
+  <h3>Elefant</h3>
+  <p><strong>Typ:</strong> Säugetier</p>
+  <p><strong>Färg:</strong> Grå</p>
+  <p><strong>Födelseår:</strong> 2015</p>
+  <p class="description">En stor och stark elefant från Afrika.</p>
+</div>
+
+<div class="animal" data-category="säugetiere">
+  <img src="./images/animals/lejon.jpg" alt="Lejon">
+  <h3>Lejon</h3>
+  <p><strong>Typ:</strong> Säugetier</p>
+  <p><strong>Färg:</strong> Gul/brun</p>
+  <p><strong>Födelseår:</strong> 2018</p>
+  <p class="description">Kungen av djungeln.</p>
+</div>
+
+<div class="animal" data-category="fåglar">
+  <img src="./images/animals/orn.jpg" alt="Örn">
+  <h3>Örn</h3>
+  <p><strong>Typ:</strong> Fågel</p>
+  <p><strong>Färg:</strong> Brun/vit</p>
+  <p><strong>Födelseår:</strong> 2020</p>
+  <p class="description">En ståtlig rovfågel.</p>
+</div>
+
+<div class="animal" data-category="fåglar">
+  <img src="./images/animals/anka.jpg" alt="Anka">
+  <h3>Anka</h3>
+  <p><strong>Typ:</strong> Fågel</p>
+  <p><strong>Färg:</strong> Gul</p>
+  <p><strong>Födelseår:</strong> 2021</p>
+  <p class="description">En glad liten anka.</p>
+</div>
+
+<div class="animal" data-category="reptiler">
+  <img src="./images/animals/orm.jpg" alt="Orm">
+  <h3>Orm</h3>
+  <p><strong>Typ:</strong> Reptil</p>
+  <p><strong>Färg:</strong> Grön</p>
+  <p><strong>Födelseår:</strong> 2019</p>
+  <p class="description">En slingrande orm.</p>
+</div>
+
+<div class="animal" data-category="reptiler">
+  <img src="./images/animals/odla.jpg" alt="Ödla">
+  <h3>Ödla</h3>
+  <p><strong>Typ:</strong> Reptil</p>
+  <p><strong>Färg:</strong> Brun</p>
+  <p><strong>Födelseår:</strong> 2017</p>
+  <p class="description">En liten ödla som solar sig på en sten.</p>
+</div>
+
+<div class="animal" data-category="fiskar">
+  <img src="./images/animals/fisk.jpg" alt="Fisk">
+  <h3>Fisk</h3>
+  <p><strong>Typ:</strong> Fisk</p>
+  <p><strong>Färg:</strong> Blå</p>
+  <p><strong>Födelseår:</strong> 2022</p>
+  <p class="description">En fisk som simmar lugnt i vattnet.</p>
+</div>
+
+<div class="animal" data-category="fiskar">
+  <img src="./images/animals/haj.jpg" alt="Haj">
+  <h3>Haj</h3>
+  <p><strong>Typ:</strong> Fisk</p>
+  <p><strong>Färg:</strong> Grå</p>
+  <p><strong>Födelseår:</strong> 2016</p>
+  <p class="description">En haj med stora tänder.</p>
+</div>
+
+<div class="animal" data-category="insekter">
+  <img src="./images/animals/fjaril.jpg" alt="Fjäril">
+  <h3>Fjäril</h3>
+  <p><strong>Typ:</strong> Insekt</p>
+  <p><strong>Färg:</strong> Färgglad</p>
+  <p><strong>Födelseår:</strong> 2023</p>
+  <p class="description">En vacker fjäril som flyger på ängen.</p>
+</div>
+
+<div class="animal" data-category="insekter">
+  <img src="./images/animals/nyckelpiga.jpg" alt="Nyckelpiga">
+  <h3>Nyckelpiga</h3>
+  <p><strong>Typ:</strong> Insekt</p>
+  <p><strong>Färg:</strong> Röd med svarta prickar</p>
+  <p><strong>Födelseår:</strong> 2022</p>
+  <p class="description">En liten nyckelpiga som kryper på ett blad.</p>
+</div>
+
+</section>
+
 
 
 
@@ -138,25 +219,8 @@
             </div>
         </footer>
 
-        <script>
-            const categoryLinks = document.querySelectorAll(".sidebar a");
-            const animals = document.querySelectorAll(".animal");
+        <script src="./js/main.js"></script>
 
-            categoryLinks.forEach(link => {
-                link.addEventListener("click", event => {
-                    event.preventDefault();
-                    const category = link.dataset.category;
-
-                    animals.forEach(animal => {
-                        if (category === "all" || animal.dataset.category === category) {
-                            animal.style.display = "block";
-                        } else {
-                            animal.style.display = "none";
-                        }
-                    });
-                });
-            });
-        </script>
 
     </body>
 
