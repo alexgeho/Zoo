@@ -1,36 +1,33 @@
 .hero {
   position: relative;
   background: url("../images/bg/hero.svg") no-repeat center center / cover;
-  background-attachment: scroll;   
-  min-height: 60vh;               
+  /* background-attachment: scroll; */
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   flex-direction: column;
-  
+
 }
 
 
 .hero-content {
-  background: rgba(0,0,0,0.5);  
+  background: rgba(0, 0, 0, 0.5);
   padding: 20px 40px;
   border-radius: 10px;
   text-align: center;
-  z-index: 2; 
-  /* margin-top: -210px; */
-  /* margin-left: -370px;  */
+  z-index: 2;
+
 }
 
-.hero-content h1{
-
+.hero-content h1 {
   font-size: 55px;
   font-weight: lighter;
 
 }
 
-.hero-content p{
-
+.hero-content p {
   font-size: 35px;
   font-weight: lighter;
 
@@ -40,16 +37,15 @@
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(
-    rgba(0,0,0,0.1) 0%,   
-    rgba(0,0,0,0.1) 50%,  
-    rgba(0,0,0,0.2) 100%  
-  );
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.2) 100%);
   z-index: 1;
 }
-
 
 
 .btn {
@@ -64,12 +60,11 @@
 }
 
 .btn-primary {
-  background-color: #ff9800; /* оранжевый */
+  background-color: #ff9800;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #e68900; /* темнее при наведении */
+  background-color: #e68900;
+
 }
-
-

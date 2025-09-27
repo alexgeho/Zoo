@@ -1,6 +1,7 @@
+/* --- SIDEBAR --- */
+
 .containerMain {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 15px;
 }
@@ -12,11 +13,6 @@
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   height: fit-content;
-  align-items: center;
-  margin: 20px auto;
-  width: 90%;
-
-
 }
 
 .search-form {
@@ -59,12 +55,12 @@
 .sidebar a {
   display: block;
   padding: 10px 15px;
-  text-decoration: none;
-  background: #ffffff;
+  background: #fff;
   border-radius: 6px;
   font-size: 20px;
   color: #2e7d32;
   font-weight: 500;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -73,28 +69,18 @@
   color: white;
 }
 
-
-
-
+/* --- CATALOG --- */
 .catalog {
   flex: 1;
-  /* 🔥 занимает всё свободное место */
   display: flex;
-  /* включаем флекс-контейнер */
   flex-wrap: wrap;
-  /* переносим элементы на новые строки */
   gap: 15px;
-  /* расстояние между карточками */
   padding: 20px;
 }
 
-
-
 .animal {
   flex: 1 1 22%;
-  /* около 4 животных в ряд (100 / 4 ≈ 25%, оставили запас под gap) */
   min-width: 200px;
-  /* если экран сжимается — карточка не меньше 200px */
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -104,13 +90,8 @@
 
 .animal img {
   max-width: 100%;
-  /* чтобы не выходило за границы карточки */
   height: 150px;
-  /* фиксированная высота */
   object-fit: cover;
-  /* картинка вписывается, лишнее обрезается */
   border-radius: 6px;
-  /* слегка скруглим уголки */
   margin-bottom: 10px;
-  /* отступ снизу от текста */
 }

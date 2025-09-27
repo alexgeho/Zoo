@@ -1,78 +1,78 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;             
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 10px;
-    /* text-align: center;  */
-}
-
-.logo img {
-    max-height: 100px;             
-    width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .logo {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 0;             /* убираем -16px */
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 100px;
+  width: auto;
 }
 
 .descriptor h3 {
   margin: 0;
-  font-size: 16px;                /* чуть меньше */
-  color: #2e7d32;      
+  font-size: 16px;
+  color: #2e7d32;
 }
 
 .descriptor p {
   margin: 0;
-  font-size: 14px;                /* меньше текста */
+  font-size: 14px;
   color: #555;
 }
 
 .menu ul {
-    display: flex;
-    flex-wrap: wrap;              /* ✅ чтобы ссылки переносились */
-    gap: 10px;                    /* меньше расстояние */
-    list-style: none;
-    margin: 5px 0;
-    padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
 }
 
 .menu a {
-    color: #2e7d32;
-    text-decoration: underline;
-    font-weight: 200;
-    font-size: 18px;         
+  color: #2e7d32;
+  text-decoration: underline;
+  font-weight: 200;
+  font-size: 22px;
+  padding: 10px;
 }
 
 .menu a:hover {
-    color: #ff9800;
+  color: #ff9800;
 }
 
 .rightHeader {
-    display: flex;
-    flex-direction: column;      
-    align-items: flex-start;     
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.number {
-  color: #2e7d32;   
-  font-size: 16px;              
-
+.number a {
+  color: #2e7d32;
+  font-size: 18px;
+  margin-bottom: 10px;  
+  display: inline-block;
 }
 
 .btn-primaryHeader {
-    background-color: #2e7d32;
-    color: white;
-    padding: 6px 12px;            /* меньше кнопка */
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    width: auto;                  /* ✅ ширина по содержимому */
+  background-color: #2e7d32;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  width: auto;
+}
+
+.btn-primaryHeader:hover {
+  background-color: #256428;
 }
