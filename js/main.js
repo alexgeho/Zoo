@@ -1,22 +1,28 @@
 // js/main.js
 
-// Находим все ссылки категорий и карточки животных
+// === ФИЛЬТРАЦИЯ ПО КАТЕГОРИЯМ ===
 const categoryLinks = document.querySelectorAll('.sidebar a');
 const animals = document.querySelectorAll('.animal');
 
-// Вешаем событие на каждую ссылку
 categoryLinks.forEach(link => {
   link.addEventListener('click', (e) => {
-    e.preventDefault(); // отключаем переход по ссылке
-    const category = link.dataset.category; // берём значение data-category
+    e.preventDefault();
+    const category = link.dataset.category;
 
-    // Перебираем всех животных
     animals.forEach(animal => {
       if (category === 'all' || animal.dataset.category === category) {
-        animal.style.display = 'block'; // показываем
+        animal.style.display = 'block';
       } else {
-        animal.style.display = 'none'; // скрываем
+        animal.style.display = 'none';
       }
     });
+  });
+});
+
+// === АЛЕРТ ПРИ КЛИКЕ НА ЖИВОТНОЕ ===
+animals.forEach(animal => {
+  animal.addEventListener('click', () => {
+    const name = animal.querySelector('h3').innerText;
+    alert(`📢 ${name}: detaljerad information kommer snart!`);
   });
 });
