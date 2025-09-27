@@ -1,5 +1,5 @@
 .containerMain {
-    background-color: rgb(214, 255, 241);
+    /* background-color: rgb(214, 255, 241); */
     /* border-radius: 5%; */
     height: 500px;
     max-width: 1200px;
@@ -13,22 +13,21 @@
 
 .sidebar {
     background-color: blanchedalmond;    
-    width: 100px;
+    max-width: 195px;
 }
 
 
 .search-form {
   display: flex;
-  /* width: 100px;   */
+  
   margin-bottom: 15px;
 }
 
 .search-form input {
-  flex: 1;
-  padding: 8px;
+  /* padding: 8px; */
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .search-form button {
@@ -71,10 +70,4 @@ padding: 10px;
 }
 
 
-
-.catalog {
-    background-color: aliceblue;
-    /* outline: 2px dashed blue;  */
-    width: auto;
-}
 

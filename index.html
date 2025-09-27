@@ -91,20 +91,72 @@
 
 
                 <section class="catalog">
-                    <p></p>
+                    <div class="animal" data-category="säugetiere">Elefant</div>
+                    <div class="animal" data-category="säugetiere">Lejon</div>
+                    <div class="animal" data-category="fåglar">Örn</div>
+                    <div class="animal" data-category="fåglar">Anka</div>
+                    <div class="animal" data-category="reptiler">Orm</div>
+                    <div class="animal" data-category="reptiler">Ödla</div>
+                    <div class="animal" data-category="fiskar">Fisk</div>
+                    <div class="animal" data-category="fiskar">Haj</div>
+                    <div class="animal" data-category="insekter">Fjäril</div>
+                    <div class="animal" data-category="insekter">Nyckelpiga</div>
                 </section>
 
 
 
 
-
-
             </div>
-
-
         </main>
 
-        <footer></footer>
+        <footer class="footer">
+            <div class="container footer-content">
+                <div class="footer-logo">
+                    <img src="/images/logo/logo.png" alt="Zoo logo">
+                    <p>World’s #1 Zoo – Fantastiska djur från hela världen</p>
+                </div>
+
+                <nav class="footer-menu">
+                    <ul>
+                        <li><a href="#">Hem</a></li>
+                        <li><a href="#">Om oss</a></li>
+                        <li><a href="#">Priser</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-contact">
+                    <p>📍 Stockholm, Sverige</p>
+                    <p>📞 +46 8 12 410 276</p>
+                    <p>✉️ info@zoo1.se</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 World’s #1 Zoo. Alla rättigheter förbehållna.</p>
+            </div>
+        </footer>
+
+        <script>
+            const categoryLinks = document.querySelectorAll(".sidebar a");
+            const animals = document.querySelectorAll(".animal");
+
+            categoryLinks.forEach(link => {
+                link.addEventListener("click", event => {
+                    event.preventDefault();
+                    const category = link.dataset.category;
+
+                    animals.forEach(animal => {
+                        if (category === "all" || animal.dataset.category === category) {
+                            animal.style.display = "block";
+                        } else {
+                            animal.style.display = "none";
+                        }
+                    });
+                });
+            });
+        </script>
 
     </body>
 
