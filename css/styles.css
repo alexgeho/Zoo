@@ -1,7 +1,6 @@
 @import url(header.css);
-@import url(sidebar.css);
+@import url(sidebarAndCatalog.css);
 @import url(hero.css);
-@import url(catalog.css);
 @import url(footer.css);
 
 body {
