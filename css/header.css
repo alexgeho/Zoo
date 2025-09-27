@@ -33,8 +33,9 @@
 .menu ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 30px;
   list-style: none;
+  padding: 20px;
 }
 
 .menu a {
@@ -42,7 +43,7 @@
   text-decoration: underline;
   font-weight: 200;
   font-size: 22px;
-  padding: 10px;
+  
 }
 
 .menu a:hover {
