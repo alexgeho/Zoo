@@ -1,16 +1,17 @@
 .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;              /* ✅ разрешаем перенос */
+    flex-wrap: wrap;             
     align-items: center;
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5px 10px;            /* немного "воздуха" */
+    /* padding: 5px 10px; */
+    /* text-align: center;  */
 }
 
 .logo img {
-    max-height: 80px;             /* ✅ логотип меньше */
+    max-height: 100px;             
     width: auto;
 }
 
@@ -18,7 +19,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;                    /* расстояние между картинкой и текстом */
     margin-bottom: 0;             /* убираем -16px */
 }
 
@@ -47,7 +47,7 @@
     color: #2e7d32;
     text-decoration: underline;
     font-weight: 200;
-    font-size: 16px;              /* ✅ меньше шрифт */
+    font-size: 18px;         
 }
 
 .menu a:hover {
@@ -56,15 +56,14 @@
 
 .rightHeader {
     display: flex;
-    flex-direction: column;       /* ✅ кнопка под номером */
-    align-items: flex-start;      /* выравниваем по левому краю */
-    gap: 5px;
+    flex-direction: column;      
+    align-items: flex-start;     
 }
 
 .number {
   color: #2e7d32;   
-  font-size: 16px;                /* ✅ меньше */
-  margin: 0;
+  font-size: 16px;              
+
 }
 
 .btn-primaryHeader {
