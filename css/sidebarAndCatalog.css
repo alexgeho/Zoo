@@ -81,8 +81,10 @@
   padding: 20px;
 }
 
+
+
 .animal {
-  flex: 1 1 22%;
+  flex: 1 1 calc(20% - 15px);
   min-width: 200px;
   background: white;
   border: 1px solid #ddd;

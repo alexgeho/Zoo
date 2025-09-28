@@ -21,10 +21,12 @@ categoryLinks.forEach(link => {
 
 animals.forEach(animal => {
   animal.addEventListener('click', () => {
-    const name = animal.querySelector('h3').innerText;
-    alert(`📢 ${name}: detaljerad information kommer snart!`);
+    const nameParagraph = animal.querySelector('p'); 
+    const nameText = nameParagraph.innerText.replace("Namn:", "").trim();
+    alert(`📢 ${nameText}: detaljerad information kommer snart!`);
   });
 });
+
 
 
 
