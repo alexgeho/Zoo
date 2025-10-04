@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
     <head>
         <meta charset="UTF-8">
@@ -37,7 +37,7 @@
                     <div class="number">
                         <a href="tel:+46812410276">+46 8 12 410 276</a>
                     </div>
-                    <button class="btn-primaryHeader">Köp biljett</button>
+                    <button class="btn-primaryHeader">Ladda ned katalogen</button>
 
                 </div>
 
@@ -53,7 +53,7 @@
 
                     <h1>Välkommen till World’s #1 ZOO</h1>
                     <p>Upptäck fantastiska djur från hela världen.</p>
-                    <button class="btn btn-primary">Köp biljett</button>
+                    <button class="btn btn-primary">Ställ en fråga</button>
 
                 </div>
 
@@ -210,7 +210,44 @@
         </footer>
 
         <script src="./js/main.js"></script>
+<script>
+(() => {
+  // находим каталог и не даём повесить обработчик дважды
+  const catalog = document.querySelector('.catalog');
+  if (!catalog || catalog.dataset.alertBound === '1') return;
+  catalog.dataset.alertBound = '1';
 
+  // один обработчик на весь каталог
+  catalog.addEventListener('click', (e) => {
+    const card = e.target.closest('.animal');
+    if (!card || !catalog.contains(card)) return;
+
+    // собираем все <p><strong>Label:</strong> Value</p> → объект info
+    const info = {};
+    card.querySelectorAll('p').forEach(p => {
+      const strong = p.querySelector('strong');
+      if (!strong) return;
+
+      const key = strong.textContent.replace(':', '').trim(); // напр. "Namn"
+
+      // берём текст параграфа без <strong> и двоеточия
+      const clone = p.cloneNode(true);
+      const s = clone.querySelector('strong');
+      if (s) s.remove();
+      const value = clone.textContent.replace(':', '').trim();
+
+      if (key) info[key] = value;
+    });
+
+    const name = info['Namn'] || 'Djur';
+    const message = Object.entries(info)
+      .map(([k, v]) => `${k}: ${v}`)
+      .join('\n') || 'Detaljer kommer snart.';
+
+    alert(`📢 ${name}\n\n${message}`);
+  }, { passive: true });
+})();
+</script>
 
     </body>
 

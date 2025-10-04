@@ -19,13 +19,13 @@ categoryLinks.forEach(link => {
 
 
 
-animals.forEach(animal => {
-  animal.addEventListener('click', () => {
-    const nameParagraph = animal.querySelector('p'); 
-    const nameText = nameParagraph.innerText.replace("Namn:", "").trim();
-    alert(`📢 ${nameText}: detaljerad information kommer snart!`);
-  });
-});
+// animals.forEach(animal => {
+//   animal.addEventListener('click', () => {
+//     const nameParagraph = animal.querySelector('p'); 
+//     const nameText = nameParagraph.innerText.replace("Namn:", "").trim();
+//     alert(`📢 ${nameText}: detaljerad information kommer snart!`);
+//   });
+// });
 
 
 

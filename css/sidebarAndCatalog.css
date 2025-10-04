@@ -76,17 +76,19 @@
 
 /* --- CATALOG --- */
 .catalog {
-  flex: 1;
+  flex: 1; 
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 15px; 
   padding: 20px;
 }
 
 
 
 .animal {
-  flex: 1 1 calc(20% - 15px);
+
+  flex: 1 1 calc(25% - 15px);
+  
   min-width: 200px;
   background: white;
   border: 1px solid #ddd;
@@ -101,4 +103,23 @@
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .containerMain {
+        flex-direction: column; 
+    }
+    
+    .sidebar {
+        flex: 1 1 100%;
+        margin: 20px 15px 0 15px; 
+        width: auto;
+    }
+
+    .animal {
+        flex: 1 1 100%; 
+        max-width: 400px; 
+        margin: 0 auto 15px auto; 
+    }
 }
