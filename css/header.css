@@ -1,79 +1,98 @@
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px;
-}
+    @media (max-width: 768px) {
 
-.logo {
-  display: flex;
-  align-items: center;
-}
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px;
+      }
 
-.logo img {
-  max-height: 100px;
-  width: auto;
-}
 
-.descriptor h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #2e7d32;
-}
+      .menu ul {
+        display: flex;
+        flex-direction: column;
+      }
+    }
 
-.descriptor p {
-  margin: 0;
-  font-size: 14px;
-  color: #555;
-}
 
-.menu ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  list-style: none;
-  padding: 20px;
-}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+    }
 
-.menu a {
-  color: #2e7d32;
-  text-decoration: underline;
-  font-weight: 200;
-  font-size: 22px;
-  
-}
+    .logo {
+      display: flex;
+      align-items: center;
+    }
 
-.menu a:hover {
-  color: #ff9800;
-}
+    .logo img {
+      max-height: 100px;
+      width: auto;
+    }
 
-.rightHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
-}
+    .descriptor h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #2e7d32;
+    }
 
-.number a {
-  color: #2e7d32;
-  font-size: 22px;
-  margin-bottom: 10px;  
-  display: inline-block;
-}
+    .descriptor p {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
 
-.btn-primaryHeader {
-  background-color: #2e7d32;
-  color: white;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 6px;
-  font-size: 22px;
-  width: 175px;
-}
+    .menu ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      list-style: none;
+      padding: 20px;
+    }
 
-.btn-primaryHeader:hover {
-  background-color: #256428;
-}
+    .menu a {
+      color: #2e7d32;
+      text-decoration: underline;
+      font-weight: 200;
+      font-size: 22px;
+
+    }
+
+    .menu a:hover {
+      color: #ff9800;
+    }
+
+    .rightHeader {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .number a {
+      color: #2e7d32;
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    .btn-primaryHeader {
+      background-color: #2e7d32;
+      color: white;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 22px;
+      width: 175px;
+    }
+
+    .btn-primaryHeader:hover {
+      background-color: #256428;
+    }
