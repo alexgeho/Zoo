@@ -3,16 +3,16 @@
       .container {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 auto;
         padding: 10px;
       }
 
-
       .menu ul {
-        display: flex;
         flex-direction: column;
+      }
+
+      .logo {
+        flex-direction: column;
+
       }
     }
 

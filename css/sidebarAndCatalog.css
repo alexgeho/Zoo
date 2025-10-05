@@ -1,4 +1,23 @@
-/* --- SIDEBAR --- */
+
+
+@media (max-width: 768px) {
+    .containerMain {
+        flex-direction: column; 
+    }
+    
+    .sidebar {
+        flex: 1 1 100%;
+        margin: 20px 15px 0 15px; 
+        width: auto;
+    }
+
+    .animal {
+        flex: 1 1 100%; 
+        max-width: 400px; 
+        margin: 0 auto 15px auto; 
+    }
+}
+
 
 .containerMain {
   display: flex;
@@ -7,6 +26,8 @@
   max-width: 1200px;
   margin: auto;
 }
+
+/* --- SIDEBAR --- */
 
 .sidebar {
   flex: 0 0 150px; 
@@ -19,26 +40,6 @@
 }
 
 
-* {
-  box-sizing: border-box;
-} 
-
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-
-}
-
-
-.animal {
-  flex: 0 0 25% ;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer; 
-}
 
 .search-form {
   display: flex;
@@ -96,12 +97,33 @@
 
 
 
+* {
+  box-sizing: border-box;
+} 
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+
+}
+
+
+.animal {
+  flex: 0 0 25% ;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer; 
+}
+
 .animal img {
   max-width: 200 px;
   height: 150 px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  border-radius: 6 px;
+  margin-bottom: 10 px;
 }
 
 
@@ -110,21 +132,3 @@
 }
 
 
-/* --- MEDIA QUERY FÖR MOBIL (ОСТАВЛЯЕМ БЕЗ ИЗМЕНЕНИЙ) --- */
-@media (max-width: 768px) {
-    .containerMain {
-        flex-direction: column; 
-    }
-    
-    .sidebar {
-        flex: 1 1 100%;
-        margin: 20px 15px 0 15px; 
-        width: auto;
-    }
-
-    .animal {
-        flex: 1 1 100%; 
-        max-width: 400px; 
-        margin: 0 auto 15px auto; 
-    }
-}
