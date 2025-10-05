@@ -2,14 +2,14 @@ footer {
   background: #2e7d32;
   color: white;
   padding: 40px 0 20px;
-  
+
 }
 
 .footer-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  
+
 }
 
 .footer-logo img {
@@ -46,7 +46,6 @@ footer {
 .footer-contact a {
   color: white;
 
-
 }
 
 .footer-bottom {
@@ -55,4 +54,27 @@ footer {
   padding-top: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .footer-menu {
+    margin: auto;
+  }
+
+  .footer-logo {
+    margin: auto;
+    
+  }
+
+  .footer-contact {
+    margin: auto;
+  }
+
 }
