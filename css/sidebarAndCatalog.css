@@ -4,18 +4,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
 }
 
 .sidebar {
-  flex: 0 0 220px;
+  /* КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: Уменьшаем ширину сайдбара, 
+     чтобы дать каталогу больше места и гарантировать 4 в ряд. */
+  flex: 0 0 20%; 
+  
   background: #fef8e7;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   height: fit-content;
   margin: 20px auto;
-  width: 90%;  
+  width: 90%; /* Это правило игнорируется, так как flex: 0 0 150px доминирует */
 }
 
 .search-form {
@@ -75,37 +77,48 @@
 
 
 /* --- CATALOG --- */
+
+* {
+  box-sizing: border-box;
+}
+
+
 .catalog {
   flex: 1; 
   display: flex;
   flex-wrap: wrap;
-  gap: 15px; 
-  padding: 20px;
-}
 
+}
 
 
 .animal {
 
-  flex: 1 1 calc(25% - 15px);
-  
-  min-width: 200px;
+  flex: 0 0 25% ;
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 15px;
+  /* padding: 15px; */
   text-align: center;
+  cursor: pointer; /* Добавим курсор, чтобы было понятно, что карточка кликабельна */
 }
 
-.animal img {
+/* .animal img {
   max-width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
+} */
+
+/* 2. СКРЫВАЕМ ТЕКСТ: 
+   Все параграфы внутри карточки будут скрыты, так как вся инфа идет в alert.
+*/
+.animal p {
+  display: none;
 }
 
 
+/* --- MEDIA QUERY FÖR MOBIL (ОСТАВЛЯЕМ БЕЗ ИЗМЕНЕНИЙ) --- */
 @media (max-width: 768px) {
     .containerMain {
         flex-direction: column; 
