@@ -10,38 +10,33 @@
 
     <body>
 
-        <header class="background">
+        <header>
 
-            <div class="container">
+            <div class="logo">
+                <img src="./images/logo/logo.png" alt="ZOO">
 
-                <div class="logo"> 
-                    
-                    <img src="./images/logo/logo.png" alt="ZOO">
+                <div class="descriptor">
+                    <h3> World’s #1 Zoo </h3>
 
-                    <div class="descriptor">
-                        <h3> World’s #1 Zoo </h3>
-
-                        <p>Nära naturen, <br>nära hjärtat</p>
-                    </div>
+                    <p>Nära naturen, <br>nära hjärtat</p>
                 </div>
+            </div>
 
-                <nav class="menu">
-                    <ul>
-                        <li><a href="#">Hem</a></li>
-                        <li><a href="#">Om oss</a></li>
-                        <li><a href="#">Priser</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">Hem</a></li>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Priser</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
 
-                <div class="rightHeader">
-                    <div class="number">
-                        <a href="tel:+46812410276">+46 8 12 410 276</a>
-                    </div>
-                    <button class="btn-primaryHeader">Ladda ned katalogen</button>
-
+            <div class="rightHeader">
+                <div class="number">
+                    <a href="tel:+46812410276">+46 8 12 410 276</a>
                 </div>
+                <button class="btn-primaryHeader">Ladda ned katalogen</button>
 
             </div>
 
@@ -181,8 +176,8 @@
 
         </main>
 
-        <footer class="footer">
-            <div class="container footer-content">
+        <footer>
+            <div class="footer-content">
 
                 <div class="footer-logo">
                     <img src="./images/logo/logo.png" alt="Zoo logo">
@@ -212,44 +207,44 @@
         </footer>
 
         <script src="./js/main.js"></script>
-<script>
-(() => {
-  // находим каталог и не даём повесить обработчик дважды
-  const catalog = document.querySelector('.catalog');
-  if (!catalog || catalog.dataset.alertBound === '1') return;
-  catalog.dataset.alertBound = '1';
+        <script>
+            (() => {
+                // находим каталог и не даём повесить обработчик дважды
+                const catalog = document.querySelector('.catalog');
+                if (!catalog || catalog.dataset.alertBound === '1') return;
+                catalog.dataset.alertBound = '1';
 
-  // один обработчик на весь каталог
-  catalog.addEventListener('click', (e) => {
-    const card = e.target.closest('.animal');
-    if (!card || !catalog.contains(card)) return;
+                // один обработчик на весь каталог
+                catalog.addEventListener('click', (e) => {
+                    const card = e.target.closest('.animal');
+                    if (!card || !catalog.contains(card)) return;
 
-    // собираем все <p><strong>Label:</strong> Value</p> → объект info
-    const info = {};
-    card.querySelectorAll('p').forEach(p => {
-      const strong = p.querySelector('strong');
-      if (!strong) return;
+                    // собираем все <p><strong>Label:</strong> Value</p> → объект info
+                    const info = {};
+                    card.querySelectorAll('p').forEach(p => {
+                        const strong = p.querySelector('strong');
+                        if (!strong) return;
 
-      const key = strong.textContent.replace(':', '').trim(); // напр. "Namn"
+                        const key = strong.textContent.replace(':', '').trim(); // напр. "Namn"
 
-      // берём текст параграфа без <strong> и двоеточия
-      const clone = p.cloneNode(true);
-      const s = clone.querySelector('strong');
-      if (s) s.remove();
-      const value = clone.textContent.replace(':', '').trim();
+                        // берём текст параграфа без <strong> и двоеточия
+                        const clone = p.cloneNode(true);
+                        const s = clone.querySelector('strong');
+                        if (s) s.remove();
+                        const value = clone.textContent.replace(':', '').trim();
 
-      if (key) info[key] = value;
-    });
+                        if (key) info[key] = value;
+                    });
 
-    const name = info['Namn'] || 'Djur';
-    const message = Object.entries(info)
-      .map(([k, v]) => `${k}: ${v}`)
-      .join('\n') || 'Detaljer kommer snart.';
+                    const name = info['Namn'] || 'Djur';
+                    const message = Object.entries(info)
+                        .map(([k, v]) => `${k}: ${v}`)
+                        .join('\n') || 'Detaljer kommer snart.';
 
-    alert(`📢 ${name}\n\n${message}`);
-  }, { passive: true });
-})();
-</script>
+                    alert(`📢 ${name}\n\n${message}`);
+                }, { passive: true });
+            })();
+        </script>
 
     </body>
 

@@ -1,15 +1,15 @@
-.footer {
+footer {
   background: #2e7d32;
   color: white;
   padding: 40px 0 20px;
-  margin-top: 40px;
+  
 }
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+  flex-direction: row;
+  justify-content: space-around;
+  
 }
 
 .footer-logo img {

@@ -2,7 +2,7 @@
   display: flex;
   /* justify-content: center; */
   flex-direction: row;
-  max-width: 1200 px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -99,8 +99,8 @@
 }
 
 .animal img {
-  max-width: 200 px;
-  height: 150 px;
+  max-width: 200px;
+  height: 150px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
